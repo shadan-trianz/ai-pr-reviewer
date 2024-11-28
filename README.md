@@ -22,15 +22,21 @@ AI Pull Request Reviewer is a cutting-edge Node.js-based application that harnes
 
 ## Installation
 
-## Set Up Environment Variables
-Create a .env file in the root directory and add the following variables:
-API_URL=http://localhost:11434/api/generate
-DB_URL=postgresql://username:password@localhost:5432/mydb
-
-
 ### Clone the Repository
 ```bash
 git clone https://github.com/yourusername/ai-pull-request-reviewer.git
 cd ai-pull-request-reviewer
 npm install
+```
+
+## Set Up Environment Variables
+Create a .env file in the root directory and add the following variables:
+```
+API_URL=http://localhost:11434/api/generate
+DB_URL=postgresql://username:password@localhost:5432/mydb
+```
+
+## Run the project
+```
 npm run dev
+```
