@@ -25,7 +25,7 @@ AI Pull Request Reviewer is a cutting-edge Node.js-based application that harnes
 ### Clone the Repository
 ```bash
 git clone https://github.com/yourusername/ai-pull-request-reviewer.git
-cd ai-pull-request-reviewer
+cd ai-pr-reviewer
 npm install
 ```
 
