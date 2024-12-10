@@ -37,8 +37,8 @@ export const getPrReview = async (prid: string) => {
 
 export const updateStatus = async (prid: number) => {
   try {
-    const pr = await PR.findOne({ where: { prid: prid }});
-    if(pr) {
+    const pr = await PR.findOne({ where: { prid: prid } });
+    if (pr) {
       pr.status = "failed";
     }
     await pr?.save();
@@ -52,7 +52,6 @@ export const saveReview = async (prid: number, review: string) => {
       pr.response = review;
       pr.status = "success";
     }
-    console.log("prs: ", pr);
     await pr?.save();
     return true;
   } catch (error) {

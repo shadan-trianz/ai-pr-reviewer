@@ -12,10 +12,10 @@ const syncDatabase = async () => {
   try {
     await sequelize.authenticate();
     console.log(
-      "Connection to the database has been established successfully."
+      "Connection to the database has been established successfully.",
     );
 
-    await sequelize.sync({ force: false }); // Warning: This will drop the table if it exists, so use carefully.
+    await sequelize.sync({ force: true }); // Warning: This will drop the table if it exists, so use carefully.
     console.log("Database synchronized.");
   } catch (error) {
     console.error("Unable to connect to the database:", error);

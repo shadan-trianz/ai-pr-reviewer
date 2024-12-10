@@ -30,14 +30,14 @@ PR.init(
       allowNull: false,
     },
     response: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(5000),
       allowNull: true,
     },
   },
   {
     sequelize,
     modelName: "pullrequests",
-  }
+  },
 );
 
 export default PR;
