@@ -3,7 +3,7 @@ import { getResult, getStatus, reviewPr } from "../controllers/pr.controller";
 
 const router = Router();
 
-router.post("/review/:url", reviewPr);
+router.post("/review", reviewPr);
 router.get("/status/:prid", getStatus);
 router.get("/result/:prid", getResult);
 
