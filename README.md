@@ -17,8 +17,7 @@ AI Pull Request Reviewer is a cutting-edge Node.js-based application that harnes
 ## Prerequisites
 - Node.js (>= 18.x)
 - PostgreSQL
-- A GitHub account and a GitHub token with appropriate permissions.
-- Gemini model for code analysis.
+- Gemini API Key for code analysis.
 
 ## Installation
 
