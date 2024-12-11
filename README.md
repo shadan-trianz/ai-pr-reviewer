@@ -14,6 +14,30 @@ AI Pull Request Reviewer is a cutting-edge Node.js-based application that harnes
 - **Insight**: Leverages advanced models to identify subtle issues and provide detailed analysis.
 - **Scalability**: Easily scales to review multiple pull requests simultaneously.
 
+## API Endpoints
+
+### 1. POST /review?url=pull-request-url
+- **Description**: This endpoint takes the URL of your pull request, processes the review asynchronously, saves the review in the database, and returns a "prid" (pull request ID) for reference.
+- **Parameters**: 
+  - `url` (string): The URL of the pull request.
+- **Response**: 
+  - `prid` (string): The pull request ID for fetching the review status and result.
+
+### 2. GET /status/{prid}
+- **Description**: This endpoint takes a `prid` and gives the current status of the review, which can be "processing", "success", or "failed".
+- **Parameters**: 
+  - `prid` (string): The pull request ID.
+- **Response**: 
+  - `status` (string): The current status of the review.
+
+### 3. GET /result/{prid}
+- **Description**: This endpoint takes the `prid` and returns the review if found in the database.
+- **Parameters**: 
+  - `prid` (string): The pull request ID.
+- **Response**: 
+  - `review` (object): The review data for the pull request.
+
+
 ## Prerequisites
 - Node.js (>= 18.x)
 - PostgreSQL
