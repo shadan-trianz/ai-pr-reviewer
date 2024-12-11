@@ -1,6 +1,6 @@
 # AI Pull Request Reviewer
 
-AI Pull Request Reviewer is a cutting-edge Node.js-based application that harnesses the power of artificial intelligence to review pull requests. By accepting a URL for a pull request, it analyzes the files and code, providing feedback on errors, code formatting, and potential issues. The application uses Ollama's CodeGemma model running locally for the analysis.
+AI Pull Request Reviewer is a cutting-edge Node.js-based application that harnesses the power of artificial intelligence to review pull requests. By accepting a URL for a pull request, it analyzes the files and code, providing feedback on errors, code formatting, and potential issues. The application uses the Gemini model for the analysis.
 
 ## Features
 - **Pull Request Analysis**: Automatically reviews pull requests and provides AI-driven feedback.
@@ -15,10 +15,10 @@ AI Pull Request Reviewer is a cutting-edge Node.js-based application that harnes
 - **Scalability**: Easily scales to review multiple pull requests simultaneously.
 
 ## Prerequisites
-- Node.js (>= 14.x)
+- Node.js (>= 18.x)
 - PostgreSQL
 - A GitHub account and a GitHub token with appropriate permissions.
-- Ollama's CodeGemma model running locally.
+- Gemini model for code analysis.
 
 ## Installation
 
@@ -32,7 +32,7 @@ npm install
 ## Set Up Environment Variables
 Create a .env file in the root directory and add the following variables:
 ```
-API_URL=http://localhost:11434/api/generate
+API_KEY=your_gemini_api_key
 DB_URL=postgresql://username:password@localhost:5432/mydb
 ```
 
