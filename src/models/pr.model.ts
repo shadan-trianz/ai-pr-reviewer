@@ -7,10 +7,10 @@ interface PullRequest {
   response?: string;
 }
 
-interface UserCreationAttributes extends Optional<PullRequest, "prid"> {}
+interface PullRequestAttributes extends Optional<PullRequest, "prid"> {}
 
 class PR
-  extends Model<PullRequest, UserCreationAttributes>
+  extends Model<PullRequest, PullRequestAttributes>
   implements PullRequest
 {
   public prid!: number;
