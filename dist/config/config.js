@@ -37,7 +37,7 @@ exports.config = void 0;
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 exports.config = {
+    apiUrl: process.env.API_URL,
     port: process.env.PORT,
-    dbUri: process.env.DATABASE_URI,
-    jwtSecret: process.env.JWT_SECRET,
+    dbUri: process.env.DB_URL,
 };

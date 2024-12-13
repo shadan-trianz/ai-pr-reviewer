@@ -6,5 +6,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const pr_routes_1 = __importDefault(require("./routes/pr.routes"));
 const app = express();
-app.use('/', pr_routes_1.default);
+app.use("/", pr_routes_1.default);
 exports.default = app;

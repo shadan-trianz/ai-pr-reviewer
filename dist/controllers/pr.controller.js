@@ -12,15 +12,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getResult = exports.getStatus = exports.reviewPr = void 0;
 const pr_service_1 = require("../services/pr.service");
 const reviewPr = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { url } = req.params;
-    const result = yield (0, pr_service_1.reviewPrService)(url);
-    return res.json(result);
+    const { url } = req.query;
+    const result = yield (0, pr_service_1.reviewPrService)(JSON.stringify(url));
+    return res.status(200).json(result);
 });
 exports.reviewPr = reviewPr;
-const getStatus = () => {
-    console.log("in getStatus");
-};
+const getStatus = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { prid } = req.params;
+    const result = yield (0, pr_service_1.getPrStatusService)(prid);
+    return res.status(200).json(result);
+});
 exports.getStatus = getStatus;
-const getResult = () => {
-};
+const getResult = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { prid } = req.params;
+    const result = yield (0, pr_service_1.getPrReviewService)(prid);
+    return res.status(200).json(result);
+});
 exports.getResult = getResult;
